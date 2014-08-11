@@ -1,3 +1,12 @@
+/*
+ *  File:           workshop_exceptions.hpp
+ *  Authors:        Terence Henriod
+ *                  (You, of course. This is interactive!)
+ *  Last Modified:  Sometime
+ *  Description:    This file defines some basic exceptions to
+ *                  help learn some basics of C++ exceptions.
+ */
+
 #ifndef __WORKSHOP_EXCEPTIONS_HPP__
 #define __WORKSHOP_EXCEPTIONS_HPP__
 

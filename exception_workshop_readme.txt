@@ -21,13 +21,13 @@ You will need:
 
 	A C++ compiler, like g++ (if you want to compile/run code)
 	
-	A web browser (preferably Chrome) with a tab open to
+	A web browser (preferably Chrome) with a tab open to:
 	http://docs.oracle.com/javase/tutorial/essential/exceptions/advantages.html
 	(I know, it's a Java site, but it's basically pseudo-code and it's
 	very informative)
 
-	A web browser (preferably Chrome) with a tab open to the code at
-<github>
+	A web browser (preferably Chrome) with a tab open to the code at:
+	https://github.com/UNR-ACM/exception_tutorial
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -37,6 +37,12 @@ You will need:
 If you have git installed, create a repository and pull the code with the
 following terminal commands (edit as necessary):
 
+	cd ~/Desktop
+	mkdir exception_tutorial
+	cd exception_tutorial
+	git init
+	git remote add origin git@github.com:UNR-ACM/exception_tutorial.git
+	git pull origin master
 
 Otherwise, copy and paste the code on github as necessary.
 
@@ -98,6 +104,9 @@ and "normal" program execution is resumed. Notice that the catch block
 essentially defines a variable of a given exception type. That variable
 lives ONLY in the scope of the catch block.
 
+If an exception is not caught by your program, the OS will have to catch
+it and your program will crash.
+
 Notice that the exception variable of the catch block has a '&' operator
 in its definition. This makes it a reference variable which, among other
 things, enables inheritance/polymorphism properties. It's a good habit
@@ -108,6 +117,18 @@ object, so you can construct them and act on them before throwing them.
 While they are commonly constructed as they are being thrown, if
 it is not simple to initialize them, create and initialize them before
 using the "throw" command.
+
+You may notice that sometimes functions have a "throws()" clause added to
+them. This is used to define what exceptions may get thrown from a
+function. For example, all exceptions from a function with "throws" will
+be unexpected and you will likely run into compiler errors and other
+annoying obstacles. A function with "throws(exception, runtime_exception)"
+may only have those two types of exception thrown from it. Anything
+wrapping/overriding/using something with a "throws" clause must specify
+a "throws" clause that is at least as restrictive as the one it
+wraps/overrides/uses. Often people don't use a "throws" clause due to its
+restrictiveness. Sometimes, it's necessary or good for strong code
+self-documentation and contracts.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

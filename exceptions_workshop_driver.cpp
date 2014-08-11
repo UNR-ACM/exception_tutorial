@@ -1,10 +1,10 @@
 /*
- *  File:     exceptions_workshop_driver.cpp
- *  Authors:    Terence Henriod
- *          (You, of course. This is interactive!)
+ *  File:           exceptions_workshop_driver.cpp
+ *  Authors:        Terence Henriod
+ *                  (You, of course. This is interactive!)
  *  Last Modified:  Sometime
- *  Description:  This file is the driver program to facilitate learning
- *          the basics of exceptions in C++.
+ *  Description:    This file is the driver program to facilitate learning
+ *                  the basics of exceptions in C++.
  */
 
 #include <cstdio>
